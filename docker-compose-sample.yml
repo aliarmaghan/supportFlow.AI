@@ -1,0 +1,148 @@
+version: "3.9"
+
+services:
+
+  # ------------------------
+  # PostgreSQL Database
+  # ------------------------
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # ------------------------
+  # Redis (Cache + Broker)
+  # ------------------------
+  redis:
+    image: redis:7
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  # ------------------------
+  # FastAPI Application
+  # ------------------------
+  api:
+    build: .
+    container_name: fastapi_app
+    restart: unless-stopped
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "8000:8000"
+
+  # ------------------------
+  # Celery Worker
+  # ------------------------
+  celery_worker:
+    build: .
+    container_name: celery_worker
+    command: celery -A src.celery_app worker --loglevel=info
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - postgres
+
+  # ------------------------
+  # Celery Beat (Scheduler)
+  # ------------------------
+  celery_beat:
+    build: .
+    container_name: celery_beat
+    command: celery -A src.celery_app beat --loglevel=info
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - postgres
+
+  # ------------------------
+  # Flower (Celery Monitoring)
+  # ------------------------
+  flower:
+    image: mher/flower
+    container_name: flower
+    restart: unless-stopped
+    command: celery --broker=${REDIS_URL} flower
+    env_file:
+      - .env
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
+
+  # ------------------------
+  # Redis Commander (UI)
+  # ------------------------
+  redis-commander:
+    image: rediscommander/redis-commander
+    container_name: redis_commander
+    restart: unless-stopped
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+
+  # ------------------------
+  # PgAdmin (Postgres UI)
+  # ------------------------
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+
+  # ------------------------
+  # Prometheus (Metrics)
+  # ------------------------
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  # ------------------------
+  # Grafana (Visualization)
+  # ------------------------
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+
+
+# ------------------------
+# Volumes
+# ------------------------
+volumes:
+  postgres_data:
+  grafana_data:
