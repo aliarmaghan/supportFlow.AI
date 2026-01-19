@@ -1,0 +1,50 @@
+pydantic==2.11.9
+openai==1.108.1
+requests==2.32.5
+python-dotenv==1.1.1
+pytest==8.4.2
+groq==0.31.1
+
+
+# Database & ORM
+SQLAlchemy==2.0.43
+psycopg2-binary==2.9.10
+alembic==1.16.5
+
+# Caching & Task Queue
+redis==6.4.0
+celery==5.5.3
+
+# Async support
+asyncio==4.0.0
+asyncpg==0.30.0
+
+
+# # Task Queue & Message Broker
+# celery
+# celery[redis]
+flower  # Celery monitoring dashboard
+
+
+# API Framework (we'll use this in Phase 8)
+fastapi==0.118.0
+uvicorn[standard]==0.37.0
+python-multipart==0.0.20
+
+
+# Security & Authentication
+python-jose==3.5.0
+passlib==1.7.4
+python-multipart==0.0.20
+
+# Monitoring & Logging
+python-json-logger==4.0.0
+prometheus_client==0.23.1
+sentry-sdk==2.40.0
+
+# Testing (Phase 11)
+pytest
+pytest-asyncio
+pytest-cov
+httpx
+faker
