@@ -8,7 +8,11 @@
 
 A production-ready AI customer support agent built with OpenAI GPT-4o-mini, designed to handle thousands of concurrent conversations with intelligent classification, contextual responses, and automatic escalation.
 
-![Architecture Diagram](docs/architecture-diagram.png)
+## Response
+
+You can read the full response here:
+
+## ➡️ [View Response.](proj-desc/responseTPG.md)
 
 ## 🎯 Key Features
 
@@ -57,6 +61,8 @@ A production-ready AI customer support agent built with OpenAI GPT-4o-mini, desi
 - Pytest (Testing framework)
 - Structured JSON logging
 - 85% code coverage
+
+
 
 ## 🚀 Quick Start
 
