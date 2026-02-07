@@ -190,8 +190,8 @@ class HealthCheck:
             Adds system metrics:
                 total requests,
                 total conversations so far."""
-        from src.database.connection import db_manager
-        from src.memory.cache import conversation_cache
+        from src.core.database.connection import db_manager
+        from src.core.memory.cache import conversation_cache
         from sqlalchemy import text
         
         health = {

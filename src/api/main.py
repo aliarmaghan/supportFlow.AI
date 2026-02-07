@@ -23,11 +23,11 @@ import os
 from sqlalchemy import text, func, and_, desc
 from dotenv import load_dotenv
 
-from celery_app import celery_app
+from src.celery_app import celery_app
 # from src.workflows.conversation_agent import ProductionConversationAgent      Use this for open ai api
-from src.workflows.conversation_agentGroq import ProductionConversationAgent
-from src.workflows.async_tasks import process_message_async, generate_conversation_summary
-from src.memory.production_memory import production_memory
+from src.core.workflows.conversation_agentGroq import ProductionConversationAgent
+from src.core.workflows.async_tasks import process_message_async, generate_conversation_summary
+from src.core.memory.production_memory import production_memory
 
 from src.api.security import (
     SecurityManager, APIKeyAuth, get_current_user, 
@@ -194,7 +194,7 @@ async def health_check():
     
     # Check Database
     try:
-        from src.database.connection import db_manager
+        from src.core.database.connection import db_manager
         from sqlalchemy import text
         
         with db_manager.get_session() as session:
@@ -208,7 +208,7 @@ async def health_check():
     
     # Check Redis/Cache
     try:
-        from src.memory.cache import conversation_cache
+        from src.core.memory.cache import conversation_cache
         
         # Use the ping method
         conversation_cache.ping()
@@ -443,7 +443,7 @@ async def escalate_conversation(conversation_id: str, background_tasks: Backgrou
         production_memory.update_conversation_status(conversation_id, 'escalated')
         
         # Send notification in background
-        from src.workflows.async_tasks import send_escalation_email
+        from src.core.workflows.async_tasks import send_escalation_email
         background_tasks.add_task(
             send_escalation_email.delay,
             conversation_id=conversation_id,
@@ -553,7 +553,7 @@ async def get_analytics_summary():
         - Escalation rate
     """
     try:
-        from src.database.connection import db_manager
+        from src.core.database.connection import db_manager
         from src.models.database_models import ConversationDB
         from sqlalchemy import func,text  # Make sure text is imported
         
