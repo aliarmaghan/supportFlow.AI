@@ -1,0 +1,17 @@
+# prometheus.yml
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Scrape metrics from FastAPI application
+  - job_name: 'supportflow-api'
+    static_configs:
+      - targets: ['api:8000']
+    metrics_path: '/metrics'
+    
+  # Scrape metrics from Celery workers (if exposing metrics)
+  - job_name: 'celery-workers'
+    static_configs:
+      - targets: ['celery_worker:9090']
+    metrics_path: '/metrics'
