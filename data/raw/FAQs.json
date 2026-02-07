@@ -1,0 +1,387 @@
+[
+  {
+    "id": "BILLING-001",
+    "title": "How to update my credit card information",
+    "category": "BILLING",
+    "content": "To update your payment method, navigate to Settings > Billing > Payment Methods. Click 'Add New Card' to enter your updated credit card details. Once verified, you can set it as your default payment method. Previous payment methods will be archived automatically.",
+    "tags": ["payment", "credit card", "billing", "subscription"]
+  },
+  {
+    "id": "TECHNICAL-001",
+    "title": "Why is my dashboard loading slowly?",
+    "category": "TECHNICAL",
+    "content": "Slow dashboard performance can be caused by several factors: large dataset queries, browser cache issues, or network latency. Try clearing your browser cache, checking your internet connection, or reducing the date range on data-intensive widgets. If issues persist, contact support with your browser console logs.",
+    "tags": ["performance", "loading", "dashboard", "troubleshooting"]
+  },
+  {
+    "id": "FEATURE_REQUEST-001",
+    "title": "Can we get custom reporting fields?",
+    "category": "FEATURE_REQUEST",
+    "content": "Custom reporting fields are currently in our product roadmap for Q3. In the meantime, you can use our API to create custom reports or export your data to external tools. Vote for this feature on our roadmap portal to help prioritize development.",
+    "tags": ["reporting", "customization", "roadmap", "feature"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-001",
+    "title": "How to transfer project ownership to another team member",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "Project owners can transfer ownership by going to Team Settings > Members, selecting the team member, and clicking 'Transfer Ownership'. The new owner must accept the transfer request. Note: This action cannot be undone and will remove your admin privileges for that project.",
+    "tags": ["ownership", "transfer", "team management", "permissions"]
+  },
+  {
+    "id": "BUG_REPORT-001",
+    "title": "Export function generating corrupted CSV files",
+    "category": "BUG_REPORT",
+    "content": "We're aware of an issue with CSV exports containing special characters. Our engineering team is working on a fix. Meanwhile, try exporting in Excel format or remove special characters from your data fields. The fix will be deployed in our next patch release this Friday.",
+    "tags": ["export", "csv", "bug", "corrupted file"]
+  },
+  {
+    "id": "INTEGRATION-001",
+    "title": "Setting up Salesforce integration",
+    "category": "INTEGRATION",
+    "content": "To integrate with Salesforce, you'll need Admin access to both platforms. Go to Integrations > Salesforce, authenticate with OAuth, and map your custom fields. Ensure your Salesforce API permissions include read/write access for the objects you want to sync.",
+    "tags": ["salesforce", "crm", "sync", "authentication"]
+  },
+  {
+    "id": "BILLING-002",
+    "title": "Why was my payment declined?",
+    "category": "BILLING",
+    "content": "Payment declines can occur due to insufficient funds, expired cards, or bank security holds. Check your card details and contact your bank if needed. Failed payments will be retried automatically for 3 days before account suspension.",
+    "tags": ["payment failed", "declined", "billing issue", "card"]
+  },
+  {
+    "id": "TECHNICAL-002",
+    "title": "Mobile app crashing on iOS 17",
+    "category": "TECHNICAL",
+    "content": "We've identified a compatibility issue with iOS 17.2. Update to app version 3.4.1 from the App Store, which includes the necessary fixes. If problems continue, try reinstalling the app or using our web platform temporarily.",
+    "tags": ["mobile", "ios", "crash", "update"]
+  },
+  {
+    "id": "FEATURE_REQUEST-002",
+    "title": "Request for bulk user invitation feature",
+    "category": "FEATURE_REQUEST",
+    "content": "Bulk user invitation is planned for our next release. Currently, you can invite users individually or use our API for batch operations. Enterprise customers can request early access to the beta version launching next month.",
+    "tags": ["bulk operations", "user management", "invite", "feature"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-002",
+    "title": "How to deactivate a user account while preserving data",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "To deactivate a user while maintaining their data, go to User Management > Select User > Deactivate. Their data will remain accessible to admins, and the user license will be freed up for reassignment. Reactivation is possible within 90 days.",
+    "tags": ["user deactivation", "data retention", "license management"]
+  },
+  {
+    "id": "BUG_REPORT-002",
+    "title": "Notifications not appearing in real-time",
+    "category": "BUG_REPORT",
+    "content": "We're investigating reports of delayed notifications. Check your browser's notification permissions and ensure you're not using aggressive ad blockers. As a workaround, refresh the page or check the notifications bell manually. A fix is in progress.",
+    "tags": ["notifications", "real-time", "delayed", "alerts"]
+  },
+  {
+    "id": "INTEGRATION-002",
+    "title": "Zapier integration setup guide",
+    "category": "INTEGRATION",
+    "content": "Our Zapier integration allows automation with 5000+ apps. Generate an API key from Settings > Developer, then create your first zap using our template. Free accounts have limited zap runs per month - upgrade for higher limits.",
+    "tags": ["zapier", "automation", "api", "workflow"]
+  },
+  {
+    "id": "BILLING-003",
+    "title": "How to change from monthly to annual billing",
+    "category": "BILLING",
+    "content": "Switch to annual billing from Billing > Subscription Plan > Change to Annual. You'll receive a pro-rated credit for unused monthly time and a 20% discount on the annual rate. The change takes effect immediately.",
+    "tags": ["billing cycle", "annual", "discount", "subscription"]
+  },
+  {
+    "id": "TECHNICAL-003",
+    "title": "Two-factor authentication not sending SMS codes",
+    "category": "TECHNICAL",
+    "content": "SMS delivery issues can occur due to carrier problems or incorrect phone numbers. Use an authenticator app as a more reliable alternative. To regain access, contact support with your account verification details for backup code generation.",
+    "tags": ["2fa", "sms", "authentication", "security"]
+  },
+  {
+    "id": "FEATURE_REQUEST-003",
+    "title": "Request for advanced chart customization options",
+    "category": "FEATURE_REQUEST",
+    "content": "Advanced chart customization is available in our Business plan and higher. This includes custom colors, fonts, and advanced visualization types. You can upgrade your plan or request a demo to see these features in action.",
+    "tags": ["charts", "visualization", "customization", "reporting"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-003",
+    "title": "How to merge duplicate customer records",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "Use our deduplication tool under Data Management > Merge Records. Select the primary record and choose which fields to preserve. Always backup your data before merging. Enterprise plans include automated duplicate detection.",
+    "tags": ["data cleanup", "merge", "duplicates", "records"]
+  },
+  {
+    "id": "BUG_REPORT-003",
+    "title": "Search function returning incomplete results",
+    "category": "BUG_REPORT",
+    "content": "We're aware of a search indexing issue affecting some accounts. Our team is rebuilding the search index. Meanwhile, try using advanced filters or export your data for comprehensive searching. Expected resolution: 24-48 hours.",
+    "tags": ["search", "indexing", "results", "bug"]
+  },
+  {
+    "id": "INTEGRATION-003",
+    "title": "Google Analytics 4 integration not tracking events",
+    "category": "INTEGRATION",
+    "content": "Ensure your GA4 measurement ID is correctly entered and your GA4 property is properly configured. Check for ad blockers interfering with tracking and verify that events are being sent using GA4's debug view.",
+    "tags": ["google analytics", "tracking", "events", "ga4"]
+  },
+  {
+    "id": "BILLING-004",
+    "title": "Understanding prorated charges when upgrading plans",
+    "category": "BILLING",
+    "content": "When upgrading mid-cycle, you're charged a prorated amount for the remaining days of your billing period. The new rate applies immediately, and your next billing date remains unchanged. You can see the exact charge before confirming the upgrade.",
+    "tags": ["prorated", "upgrade", "billing", "charges"]
+  },
+  {
+    "id": "TECHNICAL-004",
+    "title": "API rate limits and how to monitor usage",
+    "category": "TECHNICAL",
+    "content": "API rate limits vary by plan: Starter (100 calls/hour), Business (1000 calls/hour), Enterprise (10,000 calls/hour). Monitor your usage in the Developer Dashboard. Implement exponential backoff in your code to handle limits gracefully.",
+    "tags": ["api", "rate limits", "monitoring", "developer"]
+  },
+  {
+    "id": "FEATURE_REQUEST-004",
+    "title": "Can we have custom user roles with specific permissions?",
+    "category": "FEATURE_REQUEST",
+    "content": "Custom roles are available on Business and Enterprise plans. You can create roles with granular permissions for different team functions. Starter plans include predefined roles (Admin, Editor, Viewer) only.",
+    "tags": ["roles", "permissions", "access control", "security"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-004",
+    "title": "How to export all user activity logs",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "Activity logs can be exported by admins from Audit Logs > Export. Choose date range and format (CSV/JSON). Large exports may take several minutes to generate. Enterprise plans include automated log shipping to your SIEM.",
+    "tags": ["audit logs", "export", "compliance", "monitoring"]
+  },
+  {
+    "id": "BUG_REPORT-004",
+    "title": "Dashboard widgets not refreshing automatically",
+    "category": "BUG_REPORT",
+    "content": "A recent update caused auto-refresh issues for some dashboard configurations. Manual refresh (F5) works as a temporary solution. We're deploying a hotfix today. Check our status page for updates on the resolution timeline.",
+    "tags": ["dashboard", "refresh", "widgets", "auto-update"]
+  },
+  {
+    "id": "INTEGRATION-004",
+    "title": "Setting up webhooks for real-time data sync",
+    "category": "INTEGRATION",
+    "content": "Configure webhooks from Developer Settings > Webhooks. Specify the endpoint URL, events to monitor, and security tokens. Test your webhook using our simulation tool before going live. Ensure your endpoint can handle our payload format.",
+    "tags": ["webhooks", "real-time", "api", "automation"]
+  },
+  {
+    "id": "BILLING-005",
+    "title": "Do you offer volume discounts for large teams?",
+    "category": "BILLING",
+    "content": "Yes, we offer volume discounts for teams of 50+ users. Discounts start at 15% and increase with seat count. Contact our sales team for a custom quote. Educational and nonprofit organizations qualify for additional discounts.",
+    "tags": ["volume discount", "enterprise", "pricing", "teams"]
+  },
+  {
+    "id": "TECHNICAL-005",
+    "title": "Why am I getting CORS errors when using the API?",
+    "category": "TECHNICAL",
+    "content": "CORS errors occur when making API requests from browsers without proper headers. Ensure you're using our approved domains and including the correct authentication headers. For development, use our SDKs which handle CORS automatically.",
+    "tags": ["cors", "api", "development", "errors"]
+  },
+  {
+    "id": "FEATURE_REQUEST-005",
+    "title": "Request for dark mode interface",
+    "category": "FEATURE_REQUEST",
+    "content": "Dark mode is currently in beta testing and will be generally available next quarter. Beta access is available for customers on annual plans. You can opt-in from Appearance Settings once granted access.",
+    "tags": ["dark mode", "ui", "accessibility", "theme"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-005",
+    "title": "How to recover a deleted project",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "Deleted projects are moved to trash and retained for 30 days. Go to Trash > Select Project > Restore. After 30 days, permanent deletion occurs. Regular backups are recommended for critical data protection.",
+    "tags": ["recovery", "deleted", "trash", "backup"]
+  },
+  {
+    "id": "BUG_REPORT-005",
+    "title": "Email notifications being marked as spam",
+    "category": "BUG_REPORT",
+    "content": "Some email providers are incorrectly flagging our notifications. We're working on improving our email authentication (SPF/DKIM/DMARC). Meanwhile, add notifications@yourplatform.com to your safe senders list and check your spam folder.",
+    "tags": ["email", "spam", "notifications", "delivery"]
+  },
+  {
+    "id": "INTEGRATION-005",
+    "title": "Microsoft Teams integration for alerts",
+    "category": "INTEGRATION",
+    "content": "Our Teams integration sends alerts to designated channels. Install our Teams app from the Microsoft Store, then configure alert rules from Notification Settings. Each alert type can be routed to different channels.",
+    "tags": ["microsoft teams", "alerts", "notifications", "collaboration"]
+  },
+  {
+    "id": "BILLING-006",
+    "title": "How to apply a promo code to my account",
+    "category": "BILLING",
+    "content": "Redeem promo codes from Billing > Payment Methods > Apply Promo Code. Codes are applied to your next billing cycle. If upgrading/downgrading, the discount will be prorated. Expired or invalid codes will show an error message with details.",
+    "tags": ["promo code", "discount", "coupon", "billing"]
+  },
+  {
+    "id": "TECHNICAL-006",
+    "title": "Browser compatibility requirements",
+    "category": "TECHNICAL",
+    "content": "We support Chrome 90+, Firefox 88+, Safari 14+, and Edge 90+. Older browsers may experience limited functionality. Enable JavaScript and disable aggressive ad blockers for optimal performance. Clear cache regularly for best experience.",
+    "tags": ["browser", "compatibility", "requirements", "support"]
+  },
+  {
+    "id": "FEATURE_REQUEST-006",
+    "title": "Request for multi-language interface support",
+    "category": "FEATURE_REQUEST",
+    "content": "Multi-language support is planned for next year. Currently, our interface is English-only. However, you can input data in any language. Browser translation extensions can provide basic interface translation in the meantime.",
+    "tags": ["language", "localization", "translation", "international"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-006",
+    "title": "How to set up single sign-on (SSO)",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "SSO is available for Business and Enterprise plans. Configure SAML 2.0 integration from Security Settings > Single Sign-On. You'll need your Identity Provider metadata and certificate. Test the connection before enforcing SSO for all users.",
+    "tags": ["sso", "saml", "authentication", "security"]
+  },
+  {
+    "id": "BUG_REPORT-006",
+    "title": "Calendar sync creating duplicate events",
+    "category": "BUG_REPORT",
+    "content": "We've identified a sync issue with Google Calendar integration. Temporarily disable auto-sync and manually sync instead. A fix is scheduled for deployment next week. Affected users will receive notification when resolved.",
+    "tags": ["calendar", "sync", "duplicates", "google"]
+  },
+  {
+    "id": "INTEGRATION-006",
+    "title": "QuickBooks Online integration setup",
+    "category": "INTEGRATION",
+    "content": "Connect to QuickBooks Online from Integrations > Accounting. Authenticate with Intuit, then map your chart of accounts and customer records. Sync occurs every 4 hours automatically, or you can trigger manual syncs.",
+    "tags": ["quickbooks", "accounting", "sync", "financial"]
+  },
+  {
+    "id": "BILLING-007",
+    "title": "What happens when I hit my usage limits?",
+    "category": "BILLING",
+    "content": "When approaching limits, you'll receive email warnings at 80%, 90%, and 100%. At 100%, overage charges apply or features may be temporarily limited based on your plan. Upgrade anytime or monitor usage from the Billing dashboard.",
+    "tags": ["usage limits", "overage", "billing", "quotas"]
+  },
+  {
+    "id": "TECHNICAL-007",
+    "title": "Data backup and recovery procedures",
+    "category": "TECHNICAL",
+    "content": "We perform automated backups every 6 hours with 30-day retention. Data is stored across multiple geographic regions. For recovery requests, contact support with specific timeframe details. Enterprise plans can request custom backup schedules.",
+    "tags": ["backup", "recovery", "data protection", "disaster recovery"]
+  },
+  {
+    "id": "FEATURE_REQUEST-007",
+    "title": "Request for custom email template builder",
+    "category": "FEATURE_REQUEST",
+    "content": "Custom email templates are available in our Marketing add-on package. This includes drag-and-drop builder, variable insertion, and A/B testing. Contact sales to add this feature to your plan.",
+    "tags": ["email", "templates", "marketing", "customization"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-007",
+    "title": "How to configure data retention policies",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "Data retention policies can be set from Security Settings > Data Management. Define automatic archiving or deletion rules based on age and data type. Changes take effect immediately for new data and gradually for existing records.",
+    "tags": ["data retention", "compliance", "policies", "archiving"]
+  },
+  {
+    "id": "BUG_REPORT-007",
+    "title": "Mobile app login session expiring too quickly",
+    "category": "BUG_REPORT",
+    "content": "Some users report sessions expiring prematurely. We're adjusting session timeout settings. Ensure you're using the latest app version. As a workaround, enable 'Remember Me' during login. Update coming in v4.2.1.",
+    "tags": ["mobile", "session", "timeout", "login"]
+  },
+  {
+    "id": "INTEGRATION-007",
+    "title": "HubSpot CRM integration field mapping",
+    "category": "INTEGRATION",
+    "content": "Map custom fields between platforms from Integration Settings > Field Mapping. Standard fields sync automatically. Custom fields require manual mapping. Test with a few records first before enabling full sync.",
+    "tags": ["hubspot", "crm", "field mapping", "custom fields"]
+  },
+  {
+    "id": "BILLING-008",
+    "title": "Can I get a refund for unused portion of my annual plan?",
+    "category": "BILLING",
+    "content": "Annual plan refunds are prorated based on unused months, minus a 10% early termination fee. Requests must be made within 60 days of renewal. Contact billing support with your reason for cancellation to initiate the process.",
+    "tags": ["refund", "cancellation", "annual plan", "termination"]
+  },
+  {
+    "id": "TECHNICAL-008",
+    "title": "Why are my file uploads failing?",
+    "category": "TECHNICAL",
+    "content": "Upload failures can be due to file size limits (100MB max), unsupported formats, or network issues. Check file specifications and try compressing large files. Supported formats: PDF, JPG, PNG, DOCX, XLSX. Contact support if issues persist.",
+    "tags": ["upload", "files", "limits", "formats"]
+  },
+  {
+    "id": "FEATURE_REQUEST-008",
+    "title": "Request for advanced analytics and forecasting",
+    "category": "FEATURE_REQUEST",
+    "content": "Advanced analytics including predictive forecasting is available in our Analytics Pro add-on. This includes trend analysis, forecasting models, and custom metrics. Available for Business plans and above.",
+    "tags": ["analytics", "forecasting", "predictive", "reporting"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-008",
+    "title": "How to set up approval workflows",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "Create approval workflows from Settings > Workflows. Define triggers, approval steps, and fallback approvers. Test workflows in sandbox mode before activating. Enterprise plans include unlimited workflow steps.",
+    "tags": ["workflows", "approvals", "automation", "process"]
+  },
+  {
+    "id": "BUG_REPORT-008",
+    "title": "Time zone display issues in reports",
+    "category": "BUG_REPORT",
+    "content": "Some reports show incorrect time zones when filtering by date range. Ensure your account timezone is set correctly in Profile Settings. We're updating our timezone handling logic in the next release.",
+    "tags": ["timezone", "reports", "display", "dates"]
+  },
+  {
+    "id": "INTEGRATION-008",
+    "title": "Shopify e-commerce integration",
+    "category": "INTEGRATION",
+    "content": "Connect your Shopify store to sync orders, customers, and inventory. Install our Shopify app from the Shopify App Store, then configure sync settings. Real-time webhooks keep data updated between platforms.",
+    "tags": ["shopify", "ecommerce", "orders", "inventory"]
+  },
+  {
+    "id": "BILLING-009",
+    "title": "How to add additional storage to my plan",
+    "category": "BILLING",
+    "content": "Purchase additional storage from Billing > Add-ons > Storage. Prices start at $10/month for 50GB. Storage is prorated and added immediately. Monitor usage from your Storage dashboard to plan upgrades.",
+    "tags": ["storage", "add-ons", "upgrade", "data"]
+  },
+  {
+    "id": "TECHNICAL-009",
+    "title": "Why am I seeing 'Access Denied' errors?",
+    "category": "TECHNICAL",
+    "content": "Access denied errors indicate permission issues. Check your user role permissions with your administrator. If you recently changed roles, log out and back in. Ensure you're trying to access resources within your assigned teams/projects.",
+    "tags": ["permissions", "access denied", "security", "roles"]
+  },
+  {
+    "id": "FEATURE_REQUEST-009",
+    "title": "Request for white-labeling options",
+    "category": "FEATURE_REQUEST",
+    "content": "White-labeling is available for Enterprise plans only. This includes custom domains, branding, and CSS customization. Minimum 100-user commitment required. Contact our enterprise sales team for pricing and implementation timeline.",
+    "tags": ["white-label", "branding", "customization", "enterprise"]
+  },
+  {
+    "id": "ACCOUNT_MANAGEMENT-009",
+    "title": "How to audit user activity and changes",
+    "category": "ACCOUNT_MANAGEMENT",
+    "content": "Access the audit log from Security > Audit Trail. Filter by user, date range, or action type. Export logs for compliance purposes. Real-time monitoring alerts available for sensitive actions in Enterprise plans.",
+    "tags": ["audit", "compliance", "monitoring", "security"]
+  },
+  {
+    "id": "BUG_REPORT-009",
+    "title": "PDF exports cutting off content on second page",
+    "category": "BUG_REPORT",
+    "content": "We're addressing a PDF rendering issue affecting multi-page exports. Try reducing margin sizes or exporting as individual pages. The fix will maintain proper pagination and headers/footers across pages.",
+    "tags": ["pdf", "export", "formatting", "printing"]
+  },
+  {
+    "id": "INTEGRATION-009",
+    "title": "Mailchimp email marketing integration",
+    "category": "INTEGRATION",
+    "content": "Sync contacts and segments with Mailchimp for email campaigns. Connect via API key from Mailchimp account settings. Choose sync direction (one-way or bidirectional) and field mapping. Test with a small segment first.",
+    "tags": ["mailchimp", "email marketing", "contacts", "segments"]
+  },
+  {
+    "id": "BILLING-010",
+    "title": "Understanding tax calculation on invoices",
+    "category": "BILLING",
+    "content": "Tax is calculated based on your business location and local regulations. You can add tax IDs in Billing Settings. Tax-exempt organizations must submit documentation for verification. International taxes may apply for cross-border transactions.",
+    "tags": ["tax", "invoices", "compliance", "billing"]
+  }
+]
