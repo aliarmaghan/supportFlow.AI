@@ -2,7 +2,7 @@
 This test script runs the full workflow of classifying a support ticket using Groq,
 """
 
-from workflows.ticket_classifierGroq import TicketClassifier
+from src.workflows.ticket_classifierGroq import TicketClassifier
 import os
 from dotenv import load_dotenv
 

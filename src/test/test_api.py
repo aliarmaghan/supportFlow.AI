@@ -1,7 +1,21 @@
 import requests
 import json
 import time
+import os
 from typing import Dict, Any
+from dotenv import load_dotenv
+
+# Load environment variables from project root .env
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+load_dotenv(os.path.join(ROOT_DIR, ".env"))
+API_KEY = os.getenv("API_KEY_1")
+
+
+def auth_headers() -> Dict[str, str]:
+    """Return Authorization header if API key is configured."""
+    if API_KEY:
+        return {"Authorization": f"Bearer {API_KEY}"}
+    return {}
 
 BASE_URL = "http://localhost:8000"
 
@@ -17,7 +31,7 @@ def print_response(title: str, response):
 def test_health_check():
     """Test health check endpoint"""
     print("\n🏥 Testing Health Check...")
-    response = requests.get(f"{BASE_URL}/health")
+    response = requests.get(f"{BASE_URL}/health", headers=auth_headers())
     print_response("Health Check", response)
     return response.status_code == 200
 
@@ -35,7 +49,11 @@ def test_send_message_sync():
         }
     }
     
-    response = requests.post(f"{BASE_URL}/api/conversations/message", json=payload)
+    response = requests.post(
+        f"{BASE_URL}/api/conversations/message",
+        json=payload,
+        headers=auth_headers(),
+    )
     print_response("Synchronous Message Response", response)
     
     if response.status_code == 200:
@@ -56,7 +74,11 @@ def test_send_message_async():
         }
     }
     
-    response = requests.post(f"{BASE_URL}/api/conversations/message/async", json=payload)
+    response = requests.post(
+        f"{BASE_URL}/api/conversations/message/async",
+        json=payload,
+        headers=auth_headers(),
+    )
     print_response("Async Message Response", response)
     
     if response.status_code == 202:
@@ -85,7 +107,10 @@ def test_get_conversation(conversation_id: str):
         return
     
     print(f"\n📜 Testing Get Conversation History...")
-    response = requests.get(f"{BASE_URL}/api/conversations/{conversation_id}")
+    response = requests.get(
+        f"{BASE_URL}/api/conversations/{conversation_id}",
+        headers=auth_headers(),
+    )
     print_response(f"Conversation {conversation_id}", response)
 
 def test_continue_conversation(conversation_id: str):
@@ -102,7 +127,11 @@ def test_continue_conversation(conversation_id: str):
         "conversation_id": conversation_id
     }
     
-    response = requests.post(f"{BASE_URL}/api/conversations/message", json=payload)
+    response = requests.post(
+        f"{BASE_URL}/api/conversations/message",
+        json=payload,
+        headers=auth_headers(),
+    )
     print_response("Continue Conversation Response", response)
 
 def test_escalate_conversation(conversation_id: str):
@@ -112,7 +141,10 @@ def test_escalate_conversation(conversation_id: str):
         return
     
     print(f"\n🚨 Testing Escalate Conversation...")
-    response = requests.post(f"{BASE_URL}/api/conversations/{conversation_id}/escalate")
+    response = requests.post(
+        f"{BASE_URL}/api/conversations/{conversation_id}/escalate",
+        headers=auth_headers(),
+    )
     print_response("Escalation Response", response)
 
 def test_resolve_conversation(conversation_id: str):
@@ -122,25 +154,37 @@ def test_resolve_conversation(conversation_id: str):
         return
     
     print(f"\n✅ Testing Resolve Conversation...")
-    response = requests.post(f"{BASE_URL}/api/conversations/{conversation_id}/resolve")
+    response = requests.post(
+        f"{BASE_URL}/api/conversations/{conversation_id}/resolve",
+        headers=auth_headers(),
+    )
     print_response("Resolution Response", response)
 
 def test_customer_insights(customer_id: str = "api_test_customer_001"):
     """Test getting customer insights"""
     print(f"\n📊 Testing Customer Insights...")
-    response = requests.get(f"{BASE_URL}/api/customers/{customer_id}/insights")
+    response = requests.get(
+        f"{BASE_URL}/api/customers/{customer_id}/insights",
+        headers=auth_headers(),
+    )
     print_response(f"Insights for {customer_id}", response)
 
 def test_customer_conversations(customer_id: str = "api_test_customer_001"):
     """Test getting customer conversations"""
     print(f"\n📋 Testing Customer Conversations...")
-    response = requests.get(f"{BASE_URL}/api/customers/{customer_id}/conversations")
+    response = requests.get(
+        f"{BASE_URL}/api/customers/{customer_id}/conversations",
+        headers=auth_headers(),
+    )
     print_response(f"Conversations for {customer_id}", response)
 
 def test_analytics_summary():
     """Test system analytics"""
     print(f"\n📈 Testing Analytics Summary...")
-    response = requests.get(f"{BASE_URL}/api/analytics/summary")
+    response = requests.get(
+        f"{BASE_URL}/api/analytics/summary",
+        headers=auth_headers(),
+    )
     print_response("Analytics Summary", response)
 
 def run_comprehensive_api_test():

@@ -1,4 +1,4 @@
-from src.workflows.conversation_agentGroq import ProductionConversationAgent
+from src.core.workflows.conversation_agentGroq import ProductionConversationAgent
 import os
 from dotenv import load_dotenv
 import time

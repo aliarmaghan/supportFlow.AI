@@ -1,4 +1,4 @@
-from workflows.ticket_classifier import TicketClassifier
+from src.workflows.ticket_classifier import TicketClassifier
 import os
 from dotenv import load_dotenv
 
